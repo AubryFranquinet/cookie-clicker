@@ -1,17 +1,28 @@
-import enemyImg from "../../public/enemy/goblin.png"
-import enemyHurtImg from "../../public/enemy/goblin_hurt.png"
 import { addCoin } from "./coin"
 import { addClick } from "./clickCounter"
+import enemyImg from "../../public/enemy/goblin.png"
+import enemyHurtImg from "../../public/enemy/goblin_hurt.png"
 
 const enemy = document.querySelector(".character-enemy-img")
 const characterEnemy = document.querySelector(".character-enemy")
 
+export let powerClick = 1
+
+export const changePowerClick = (value) => {
+    powerClick = value
+}
+
 export const initEnemy = () => {
     enemy.addEventListener("click", () => {
         changeImage()
-        addCoin()
-        createDamageDom()
+        addCoin(powerClick)
+        handleClickEnemy()
+        addClick()
     })
+}
+
+export const handleClickEnemy = (params) => {
+    createDamageDom(params)
 }
 
 const changeImage = () => {
@@ -21,13 +32,16 @@ const changeImage = () => {
     }, 100)
 }
 
-const createDamageDom = () => {
+const createDamageDom = (params) => {
     const randomRight = Math.floor( Math.random() * 20 ) + 7
     const randomBottom = Math.floor( Math.random() * 15 ) + 45
     const newP = document.createElement("p")
 
     newP.classList.add("character-damage")
-    newP.innerHTML = "+ 1 coin"
+    
+    if (params === undefined) newP.innerHTML = `+ ${powerClick} coin`
+    else newP.innerHTML = `+ ${params} coin`
+
     newP.style.right = `${randomRight}%`
     newP.style.bottom = `${randomBottom}%`
 

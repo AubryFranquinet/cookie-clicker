@@ -42,6 +42,7 @@ body{
     margin: 0 1rem;
 }
 .character{
+    position: relative;
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -84,11 +85,15 @@ body{
 
 #basket {
     background-color: #CB831D;
-    float: left;
     height: 500px;
     width: 40vw;
     border-radius: 10px;
     margin: 10px;
+}
+
+#char-basket {
+    max-height: 100%;
+    overflow-y: scroll;
 }
 
 #topInfo {
@@ -100,8 +105,6 @@ body{
     margin: 10px;
     color: whitesmoke;
     padding: 15px;
-    overflow-y: scroll;
-    overflow-y: visible;
 }
 
 
@@ -126,15 +129,19 @@ Header
     border-radius: 5px;
 }
 
-.coins-content>img {
+.coins-content > img {
     width: 35px;
 }
 
-.coins-content>p {
+.coins-content > p {
     width: 35px;
     font-size: 20px;
     margin-left: 5px;
     color: #fff;
+}
+
+.coins-counter {
+    transition: 0.3s;
 }
 
 .click-counter {
