@@ -1,8 +1,12 @@
+export let coin = 0
 const coinDom = document.querySelector(".coins-counter")
 
-export let coin = 0
+export const addCoin = (powerClick) => {
+    coin += powerClick
+    coinDom.innerHTML = coin
+}
 
-export const addCoin = () => {
-    coin++
+export const changeCoin = (value) => {
+    coin = value
     coinDom.innerHTML = coin
 }
