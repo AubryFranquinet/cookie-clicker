@@ -6,7 +6,6 @@ import img5 from "../../public/upgrade/05.png"
 import img6 from "../../public/upgrade/06.png"
 
 const actionEffect = (value, effect, level) => {
-    console.log(effect, level)
     return parseFloat(value) + (effect * level) 
 }
 
@@ -23,7 +22,7 @@ export let db_upgrade = [
     },
     {
         name: "Savage warrior",
-        description: "+ 0.5 click automatique",
+        description: "+ 0.5 click / second",
         image: img2,
         price: 50,
         level: 0,
@@ -33,7 +32,7 @@ export let db_upgrade = [
     },
     {
         name: "Lady of the night",
-        description: "+ 3 click automatique",
+        description: "+ 3 click / second",
         image: img3,
         price: 250,
         level: 0,
@@ -53,7 +52,7 @@ export let db_upgrade = [
     },
     {
         name: "Golden angel",
-        description: "+ 10 click automatique",
+        description: "+ 10 click / second",
         image: img5,
         price: 2000,
         level: 0,
