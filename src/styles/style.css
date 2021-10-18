@@ -20,7 +20,9 @@ body{
     
 }
 
-/* Basket  style */
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ Basket  style 
+ ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 .warrior{
     position: absolute;
@@ -84,27 +86,27 @@ body{
 
 
 
-/* .shopping{
+.shopping{
     position: absolute;
-    top: 0.5%;
-    left: 23.2%;
+    top: 15%;
+    left: 0.6%;
+    width: 10%;
     display: flex;
     flex-direction: row;
-    background-color:#CB831D ;
-    padding: 0 80.5px;
+    background-color:rgb(31, 0, 0);
     border-radius: 5px;
-    cursor: pointer;
+    color: white;
     justify-content: center;
     align-items: center;
 }
 .shopping:hover{
-    border: 5px solid olivedrab;
+   transform: scale(1.1);
     
 }
 
 .shop{
     margin-right: 1rem;
-} */
+} 
 
 
 #topInfo {
@@ -187,8 +189,6 @@ Basket
 */
 
 #basket {
-
-    
     background-color: #CB831D;
     height: 700px;
 
@@ -197,6 +197,11 @@ Basket
     border-radius: 10px;
     margin: 10px;
     margin-top: 70px;
+    transform: translate(-100%);
+    transition: .4s;
+}
+#basket.show{
+    transform: translate(0);
 }
 
 #topInfo {
