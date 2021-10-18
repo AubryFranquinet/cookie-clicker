@@ -4,18 +4,68 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     font-weight: 900;
+    cursor: url('.././assets/cursor.cur'), auto;
 }
 
-body {
-    position: relative;
-    background-image: url("../assets/background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+body{
+    
+        position: relative;
+        background-image: url("../assets/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    
+}
+
+/* Basket  style */
+
+
+
+
+.warrior{
+    width: 150px;
+}
+.warrior:hover{
+    transform: scale(1.2);
+}
+
+.characters{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.powers{
+    margin: 0 1rem;
+}
+.character{
     display: flex;
-    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    padding: 15px;
+    border: 2px solid #8a5b0D;
+    background-color: #F1E6A2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.prices{
+    height: 100%;
+    background-color: greenyellow;
+    padding:  20px 9px;
+    border:  5px #8a5b0D solid;
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px;
+    cursor: pointer;
+}
+.prices:hover{
+    transform: scale(1.1);
 }
 
 #basket {
@@ -56,22 +106,80 @@ Header
     align-items: center;
     width: 350px;
     padding: 5px;
-    margin: 5px;
+    margin: 10px;
     background-color: rgb(31, 0, 0);
     border: 3px solid rgb(87, 74, 47);
     border-radius: 5px;
 }
 
-.coins-content > img {
+.coins-content>img {
     width: 35px;
 }
 
-.coins-content > p {
+.coins-content>p {
     width: 35px;
     font-size: 20px;
     margin-left: 5px;
     color: #fff;
 }
+
+.click-counter {
+    position: absolute;
+    top: 0;
+    left: 418px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    padding: 5px;
+    margin: 10px;
+    background-color: rgb(31, 0, 0);
+    border: 3px solid rgb(87, 74, 47);
+    border-radius: 5px;
+}
+
+.click-counter>img {
+    width: 35px;
+}
+
+.click-counter>p {
+    width: 35px;
+    font-size: 20px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+
+/*
+///////////////////////////////////////////
+Basket
+///////////////////////////////////////////
+*/
+
+#basket {
+    position: absolute;
+    background-color: #CB831D;
+    float: left;
+    height: 700px;
+    width: 40vw;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 70px;
+}
+
+#topInfo {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(149, 105, 35);
+    background: linear-gradient(0deg, rgba(149, 105, 35, 1) 0%, rgba(48, 31, 5, 1) 100%);
+    border-radius: 10px;
+    margin: 10px;
+    color: whitesmoke;
+    padding: 15px;
+    overflow-y: scroll;
+    overflow-y: visible;
+}
+
 
 /*
 ///////////////////////////////////////////
@@ -103,4 +211,5 @@ Character Enemy
         transform: translate(50px, 100px);
         opacity: 0;
     }
+
 }

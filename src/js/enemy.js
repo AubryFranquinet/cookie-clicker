@@ -1,6 +1,7 @@
 import enemyImg from "../../public/enemy/goblin.png"
 import enemyHurtImg from "../../public/enemy/goblin_hurt.png"
 import { addCoin } from "./coin"
+import { addClick } from "./clickCounter"
 
 const enemy = document.querySelector(".character-enemy-img")
 const characterEnemy = document.querySelector(".character-enemy")
