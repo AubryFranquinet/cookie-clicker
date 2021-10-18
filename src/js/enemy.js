@@ -5,19 +5,12 @@ import { addClick } from "./clickCounter"
 
 const enemy = document.querySelector(".character-enemy-img")
 const characterEnemy = document.querySelector(".character-enemy")
-let isHit = false
 
 export const initEnemy = () => {
     enemy.addEventListener("click", () => {
-        isHit = !isHit
-
-        if (isHit) {
-            changeImage()
-            addCoin()
-            createDamageDom()
-            addClick()
-        }
-        else enemy.src = enemyImg
+        changeImage()
+        addCoin()
+        createDamageDom()
     })
 }
 
