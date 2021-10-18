@@ -7,6 +7,66 @@
     cursor: url('.././assets/cursor.cur'), auto;
 }
 
+
+
+}
+
+/* azad  style*/
+
+
+
+article img{
+    width: 50px;
+    height: 50px;
+    border: 3px solid #8a5b0D;
+    cursor: pointer;
+}
+
+.article:hover img{
+    border-color: white;
+}
+.warrior{
+    width: 150px;
+}
+.warrior:hover{
+    transform: scale(1.2);
+}
+
+.characters{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.powers{
+    margin: 0 1rem;
+}
+.character{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 15px;
+    border: 2px solid #8a5b0D;
+    background-color: #F1E6A2;
+}
+.char-power{
+    display: flex;
+    
+}
+.prices{
+    height: 100%;
+    background-color: greenyellow;
+    padding:  20px 9px;
+    border:  5px #8a5b0D solid;
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px;
+    cursor: pointer;
+}
+.prices:hover{
+    transform: scale(1.1);
+}
+
 body {
     position: relative;
     background-image: url("../assets/background.jpg");
@@ -15,6 +75,30 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#basket {
+    background-color: #CB831D;
+    float: left;
+    height: 500px;
+    width: 40vw;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#topInfo {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(149, 105, 35);
+    background: linear-gradient(0deg, rgba(149, 105, 35, 1) 0%, rgba(48, 31, 5, 1) 100%);
+    border-radius: 10px;
+    margin: 10px;
+    color: whitesmoke;
+    padding: 15px;
+    overflow-y: scroll;
+    overflow-y: visible;
 }
 
 
@@ -118,20 +202,19 @@ Character Enemy
     position: absolute;
     width: 450px;
     bottom: 80px;
-    right: 50px;
+    right: 18%;
     cursor: pointer;
     transform: scaleX(-1);
 }
 
 .character-damage {
     position: absolute;
-    width: 450px;
-    bottom: 450px;
-    right: -100px;
     font-size: 50px;
     color: rgb(189, 21, 21);
     animation: animationDamage 0.3s ease;
     opacity: 1;
+    outline: none;
+    pointer-events: none;
 }
 
 @keyframes animationDamage {
@@ -139,4 +222,5 @@ Character Enemy
         transform: translate(50px, 100px);
         opacity: 0;
     }
+
 }
