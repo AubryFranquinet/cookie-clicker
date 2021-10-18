@@ -1,5 +1,7 @@
 import { db_upgrade } from "./db";
 import { upgradeBuy } from "./upgrade"
+const shopBasket = document.getElementById('basket')
+const shopping = document.getElementById('shopping')
 
 export function Basket(){ 
     const charBasket = document.getElementById('char-basket')
@@ -52,4 +54,10 @@ export function Basket(){
         character.append(charImg)
         charBasket.append(character)
     }) 
+}
+
+export function showBasket(){
+    shopping.addEventListener('click',()=>{
+        shopBasket.classList.toggle('show')
+    })
 }
