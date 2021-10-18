@@ -6,6 +6,7 @@ import img5 from "../../public/upgrade/05.png"
 import img6 from "../../public/upgrade/06.png"
 
 const actionEffect = (value, effect, level) => {
+    console.log(effect, level)
     return parseFloat(value) + (effect * level) 
 }
 
@@ -18,7 +19,7 @@ export let db_upgrade = [
         level: 0,
         effect: "ADD",
         damage: 0.5,
-        action: (value) => { return actionEffect(value, effect, level) }
+        action: (value) => { return actionEffect(value, db_upgrade[0].damage, db_upgrade[0].level) }
     },
     {
         name: "Savage warrior",
@@ -28,7 +29,7 @@ export let db_upgrade = [
         level: 0,
         effect: "AUTOMATIQUE",
         damage: 0.5,
-        action: (value) => { return actionEffect(value, effect, level) }
+        action: (value) => { return actionEffect(value, db_upgrade[0].damage, db_upgrade[0].level) }
     },
     {
         name: "Lady of the night",
@@ -38,7 +39,7 @@ export let db_upgrade = [
         level: 0,
         effect: "AUTOMATIQUE",
         damage: 3,
-        action: (value) => { return actionEffect(value, effect, level) }
+        action: (value) => { return actionEffect(value, db_upgrade[0].damage, db_upgrade[0].level) }
     },
     {
         name: "Sniper",
@@ -48,7 +49,7 @@ export let db_upgrade = [
         level: 0,
         effect: "ADD",
         damage: 5,
-        action: (value) => { return actionEffect(value, effect, level) }
+        action: (value) => { return actionEffect(value, db_upgrade[0].damage, db_upgrade[0].level) }
     },
     {
         name: "Golden angel",
@@ -58,7 +59,7 @@ export let db_upgrade = [
         level: 0,
         effect: "AUTOMATIQUE",
         damage: 10,
-        action: (value) => { return actionEffect(value, effect, level) }
+        action: (value) => { return actionEffect(value, db_upgrade[0].damage, db_upgrade[0].level) }
     },
     {
         name: "Dark Assassin",
@@ -68,6 +69,6 @@ export let db_upgrade = [
         level: 0,
         effect: "ADD",
         damage: 20,
-        action: (value) => { return actionEffect(value, effect, level) }
+        action: (value) => { return actionEffect(value, db_upgrade[0].damage, db_upgrade[0].level) }
     }
 ]
