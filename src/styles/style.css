@@ -4,14 +4,12 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     font-weight: 900;
-
-
+    cursor: url('.././assets/cursor.cur'), auto;
 }
 
 body{
-    
         position: relative;
-        background-image: url("../assets/background.png");
+        background-image: url("../assets/background.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         width: 100vw;
@@ -70,7 +68,8 @@ body{
 }
 
 
-.shopping{
+
+/* .shopping{
     position: absolute;
     top: 0.5%;
     left: 23.2%;
@@ -90,17 +89,8 @@ body{
 
 .shop{
     margin-right: 1rem;
-}
+} */
 
-
-#basket {
-    background-color: #CB831D;
-    float: left;
-    height: 700px;
-    width: 40vw;
-    border-radius: 10px;
-    margin: 10px;
-}
 
 #topInfo {
     display: flex;
@@ -131,22 +121,80 @@ Header
     align-items: center;
     width: 350px;
     padding: 5px;
-    margin: 5px;
+    margin: 10px;
     background-color: rgb(31, 0, 0);
     border: 3px solid rgb(87, 74, 47);
     border-radius: 5px;
 }
 
-.coins-content > img {
+.coins-content>img {
     width: 35px;
 }
 
-.coins-content > p {
+.coins-content>p {
     width: 35px;
     font-size: 20px;
     margin-left: 5px;
     color: #fff;
 }
+
+.click-counter {
+    position: absolute;
+    top: 0;
+    left: 418px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    padding: 5px;
+    margin: 10px;
+    background-color: rgb(31, 0, 0);
+    border: 3px solid rgb(87, 74, 47);
+    border-radius: 5px;
+}
+
+.click-counter>img {
+    width: 35px;
+}
+
+.click-counter>p {
+    width: 35px;
+    font-size: 20px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+
+/*
+///////////////////////////////////////////
+Basket
+///////////////////////////////////////////
+*/
+
+#basket {
+    
+    background-color: #CB831D;
+    height: 700px;
+    max-height: 500px;
+    width: 40vw;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 70px;
+}
+
+#topInfo {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(149, 105, 35);
+    background: linear-gradient(0deg, rgba(149, 105, 35, 1) 0%, rgba(48, 31, 5, 1) 100%);
+    border-radius: 10px;
+    margin: 10px;
+    color: whitesmoke;
+    padding: 15px;
+    overflow-y: scroll;
+    overflow-y: visible;
+}
+
 
 /*
 ///////////////////////////////////////////
@@ -158,20 +206,19 @@ Character Enemy
     position: absolute;
     width: 450px;
     bottom: 80px;
-    right: 50px;
+    right: 18%;
     cursor: pointer;
     transform: scaleX(-1);
 }
 
 .character-damage {
     position: absolute;
-    width: 450px;
-    bottom: 450px;
-    right: -100px;
     font-size: 50px;
     color: rgb(189, 21, 21);
     animation: animationDamage 0.3s ease;
     opacity: 1;
+    outline: none;
+    pointer-events: none;
 }
 
 @keyframes animationDamage {
