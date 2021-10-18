@@ -10,36 +10,39 @@
 
 /* azad  style*/
 
-
-
-article img{
+article img {
     width: 50px;
     height: 50px;
     border: 3px solid #8a5b0D;
-    cursor: pointer;
+    cursor: url('.././assets/cursor.cur'), auto;
 }
 
-.article:hover img{
+.article:hover img {
     border-color: white;
+    cursor: url('.././assets/cursor.cur'), auto;
 }
-.warrior{
+
+.warrior {
     width: 150px;
 }
-.warrior:hover{
+
+.warrior:hover {
     transform: scale(1.2);
+    cursor: url('.././assets/cursor.cur'), auto;
 }
 
-.characters{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+.characters {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.powers{
+.powers {
     margin: 0 1rem;
 }
-.character{
+
+.character {
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -47,20 +50,21 @@ article img{
     border: 2px solid #8a5b0D;
     background-color: #F1E6A2;
 }
-.char-power{
+
+.char-power {
     display: flex;
-    
 }
-.prices{
+
+.prices {
     height: 100%;
     background-color: greenyellow;
-    padding:  20px 9px;
-    border:  5px #8a5b0D solid;
-    cursor: pointer;
+    padding: 20px 9px;
+    border: 5px #8a5b0D solid;
+    cursor: url('.././assets/cursor.cur'), auto;
     box-shadow: 0 0 10px 5px;
-    cursor: pointer;
 }
-.prices:hover{
+
+.prices:hover {
     transform: scale(1.1);
 }
 
@@ -200,7 +204,7 @@ Character Enemy
     width: 450px;
     bottom: 80px;
     right: 18%;
-    cursor: pointer;
+    cursor: url('.././assets/cursor.cur'), auto;
     transform: scaleX(-1);
 }
 
@@ -214,10 +218,15 @@ Character Enemy
     pointer-events: none;
 }
 
+.hp {
+    position: absolute ;
+    bottom: 80px;
+    right: 18%;
+}
+
 @keyframes animationDamage {
     from {
         transform: translate(50px, 100px);
         opacity: 0;
     }
-
 }
