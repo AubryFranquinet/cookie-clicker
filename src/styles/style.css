@@ -7,21 +7,25 @@
     cursor: url('.././assets/cursor.cur'), auto;
 }
 
-
-/* azad  style*/
-
-
-
-article img{
-    width: 50px;
-    height: 50px;
-    border: 3px solid #8a5b0D;
-    cursor: pointer;
+body{
+    
+        position: relative;
+        background-image: url("../assets/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    
 }
 
-.article:hover img{
-    border-color: white;
-}
+/* Basket  style */
+
+
+
+
 .warrior{
     width: 150px;
 }
@@ -46,11 +50,11 @@ article img{
     padding: 15px;
     border: 2px solid #8a5b0D;
     background-color: #F1E6A2;
-}
-.char-power{
     display: flex;
-    
+    flex-direction: row;
+    justify-content: space-between;
 }
+
 .prices{
     height: 100%;
     background-color: greenyellow;
@@ -62,18 +66,6 @@ article img{
 }
 .prices:hover{
     transform: scale(1.1);
-}
-
-body {
-    position: relative;
-    background-image: url("../assets/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
 }
 
 #basket {
