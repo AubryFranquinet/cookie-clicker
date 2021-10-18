@@ -82,14 +82,30 @@ body{
     transform: scale(1.1);
 }
 
-#basket {
-    background-color: #CB831D;
-    float: left;
-    height: 500px;
-    width: 40vw;
-    border-radius: 10px;
-    margin: 10px;
+
+
+/* .shopping{
+    position: absolute;
+    top: 0.5%;
+    left: 23.2%;
+    display: flex;
+    flex-direction: row;
+    background-color:#CB831D ;
+    padding: 0 80.5px;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
+.shopping:hover{
+    border: 5px solid olivedrab;
+    
+}
+
+.shop{
+    margin-right: 1rem;
+} */
+
 
 #topInfo {
     display: flex;
@@ -171,7 +187,11 @@ Basket
 */
 
 #basket {
+
+    
     background-color: #CB831D;
+    height: 700px;
+
     max-height: 500px;
     width: 40vw;
     border-radius: 10px;
