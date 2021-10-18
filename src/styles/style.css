@@ -74,10 +74,9 @@ body{
     background-color: greenyellow;
     padding:  20px 9px;
     border:  5px #8a5b0D solid;
-    cursor: pointer;
     box-shadow: 0 0 10px 5px;
     transition: 0.2s;
-    cursor: pointer;
+  
 }
 
 .prices:hover{
@@ -98,6 +97,7 @@ body{
     color: white;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 .shopping:hover{
    transform: scale(1.1);

@@ -42,7 +42,9 @@ for(let element of db_upgrade){
     descrip.innerText = element.description
     charInfo.append(descrip);
     description.append(charInfo);
+
     //:::::::::::::::::::::::::::::::::::::::::::::::::
+    // add char images in basket
     const charImg = document.createElement('img');
     charImg.className ="images"
    charImg.className ="warrior"
