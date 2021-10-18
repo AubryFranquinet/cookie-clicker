@@ -37,6 +37,36 @@ article img {
     display: flex;
     flex-direction: column;
 }
+body{
+        position: relative;
+        background-image: url("../assets/background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    
+}
+
+/* Basket  style */
+
+.warrior{
+    position: absolute;
+    right: 0;
+    width: 100px;
+}
+
+.characters{
+    position: relative;
+  width: 100%;
+  max-height: 450px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow-y: scroll;
+}
 
 .powers {
     margin: 0 1rem;
@@ -56,7 +86,27 @@ article img {
 }
 
 .prices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.character > div:nth-child(2) {
+    margin-left: 15px;
+
+}
+
+.charInfo {
+    width: 200px;
+}
+
+.prices{
+    width: 125px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: greenyellow;
     padding: 20px 9px;
     border: 5px #8a5b0D solid;
@@ -65,19 +115,12 @@ article img {
 }
 
 .prices:hover {
-    transform: scale(1.1);
+    transition: 0.2s;
+    cursor: pointer;
 }
 
-body {
-    position: relative;
-    background-image: url("../assets/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
+.prices:hover{
+    transform: scale(1.1);
 }
 
 #basket {
@@ -169,10 +212,8 @@ Basket
 */
 
 #basket {
-    position: absolute;
     background-color: #CB831D;
-    float: left;
-    height: 700px;
+    max-height: 500px;
     width: 40vw;
     border-radius: 10px;
     margin: 10px;
