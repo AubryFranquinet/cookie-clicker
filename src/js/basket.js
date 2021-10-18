@@ -18,7 +18,7 @@ for(let element of db_upgrade){
     levelUp.innerText = "LVL " + element.level ;
 
     const prix = document.createElement('p')
-    prix.innerText = element.price + "€";
+    prix.innerText = element.price + " coins";
     // add price and leve in the price div
      pricesDiv.append(levelUp)   
      pricesDiv.append(prix)
@@ -30,6 +30,7 @@ for(let element of db_upgrade){
     const description = document.createElement('div')
     description.className ="powers";
     const charInfo = document.createElement('div');
+    charInfo.classList.add("charInfo")
 
     const charName = document.createElement('p');
     charName.innerText = element.name;

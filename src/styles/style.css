@@ -8,9 +8,8 @@
 }
 
 body{
-    
         position: relative;
-        background-image: url("../assets/background.png");
+        background-image: url("../assets/background.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         width: 100vw;
@@ -23,21 +22,20 @@ body{
 
 /* Basket  style */
 
-
-
-
 .warrior{
-    width: 150px;
-}
-.warrior:hover{
-    transform: scale(1.2);
+    position: absolute;
+    right: 0;
+    width: 100px;
 }
 
 .characters{
+    position: relative;
   width: 100%;
-  height: 100%;
+  max-height: 450px;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
+  overflow-y: scroll;
 }
 
 .powers{
@@ -55,15 +53,31 @@ body{
     justify-content: space-between;
 }
 
+.character > div:nth-child(2) {
+    margin-left: 15px;
+
+}
+
+.charInfo {
+    width: 200px;
+}
+
 .prices{
+    width: 125px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: greenyellow;
     padding:  20px 9px;
     border:  5px #8a5b0D solid;
     cursor: pointer;
     box-shadow: 0 0 10px 5px;
+    transition: 0.2s;
     cursor: pointer;
 }
+
 .prices:hover{
     transform: scale(1.1);
 }
@@ -157,10 +171,8 @@ Basket
 */
 
 #basket {
-    position: absolute;
     background-color: #CB831D;
-    float: left;
-    height: 700px;
+    max-height: 500px;
     width: 40vw;
     border-radius: 10px;
     margin: 10px;
