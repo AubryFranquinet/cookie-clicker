@@ -1,4 +1,4 @@
-export let coin = 0
+export let coin = 10000
 const coinDom = document.querySelector(".coins-counter")
 
 export const addCoin = (powerClick) => {
