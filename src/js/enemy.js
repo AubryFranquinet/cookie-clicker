@@ -43,7 +43,7 @@ const decrHealth = () => {
 export const initEnemy = () => {
     enemy.addEventListener("click", () => {
         changeImage()
-        addCoin()
+        addCoin(powerClick)
         createDamageDom()
         addClick()
         decrHealth()
@@ -64,7 +64,7 @@ const changeImage = () => {
 }
 
 
-const createDamageDom = () => {
+const createDamageDom = (params) => {
     const randomRight = Math.floor(Math.random() * 20) + 7
     const randomBottom = Math.floor(Math.random() * 15) + 45
     const newP = document.createElement("p")

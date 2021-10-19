@@ -1,3 +1,4 @@
+
 const clickDom = document.querySelector(".clickNumber")
 
 export let clicks = 0

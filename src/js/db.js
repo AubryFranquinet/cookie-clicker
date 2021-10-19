@@ -20,7 +20,6 @@ const attackAuto = (value, index) => setTimeout(() => {
     changeCoin(coin + value)
     handleClickEnemy(value)
     db_upgrade[index].actionAttack()
-    console.log(value, index)
 }, 1000);
 
 export const changeDb = (newDb) => {

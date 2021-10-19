@@ -29,13 +29,29 @@ const handleUpgrade = (data, index) => {
     }
     
     charBasket.childNodes[index].childNodes[0].childNodes[0].innerHTML = `LVL ${newDb[index].level}`
+
+    const newInformation = data.action(data.damage)
+    let newDescription = ""
+
+    if (data.effect === "ADD") {
+        newDescription = `+ ${newInformation} coins / click`
+        charBasket.childNodes[index].childNodes[1].childNodes[1].innerHTML = newDescription
+    } else if (data.effect === "AUTOMATIQUE") {
+        newDescription = `+ ${newInformation} coins / click`
+        charBasket.childNodes[index].childNodes[1].childNodes[1].innerHTML = newDescription
+    }
+    
+    newDb[index] = {
+        ...newDb[index],
+        description: newDescription
+    }
+
     changeCoin(newCoin)
     changeDb(newDb)
 
     if (data.effect === "ADD") {
         changePowerClick(data.action(powerClick))
     } else if (data.effect === "AUTOMATIQUE") {
-        console.log(db_upgrade[index].level)
         if (db_upgrade[index].level - 1 === 0) data.actionAttack()
     }
 }
