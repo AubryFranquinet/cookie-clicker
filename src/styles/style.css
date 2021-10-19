@@ -1,13 +1,42 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    cursor: url('.././assets/cursor.cur'), auto;
-}
-
-body{
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        cursor: url('.././assets/cursor.cur'), auto;
+    }
+    /* azad  style*/
+    
+    article img {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #8a5b0D;
+        cursor: url('.././assets/cursor.cur'), auto;
+    }
+    
+    .article:hover img {
+        border-color: white;
+        cursor: url('.././assets/cursor.cur'), auto;
+    }
+    
+    .warrior {
+        width: 150px;
+    }
+    
+    .warrior:hover {
+        transform: scale(1.2);
+        cursor: url('.././assets/cursor.cur'), auto;
+    }
+    
+    .characters {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    body {
         position: relative;
         background-image: url("../assets/background.jpg");
         background-size: cover;
@@ -17,12 +46,74 @@ body{
         overflow: hidden;
         display: flex;
         align-items: center;
+    }
+    /* Basket  style */
     
-}
+    .warrior {
+        position: absolute;
+        right: 0;
+        width: 100px;
+    }
+    
+    .characters {
+        position: relative;
+        width: 100%;
+        max-height: 450px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        overflow-y: scroll;
+    }
+    
+    .powers {
+        margin: 0 1rem;
+    }
+    
+    .character {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        padding: 15px;
+        border: 2px solid #8a5b0D;
+        background-color: #F1E6A2;
+    }
+    
+    .char-power {
+        display: flex;
+    }
+    
+    .prices {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .character>div:nth-child(2) {
+        margin-left: 15px;
+    }
+    
+    .charInfo {
+        width: 200px;
+    }
+    
+    .prices {
+        width: 125px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: greenyellow;
+        padding: 20px 9px;
+        border: 5px #8a5b0D solid;
+        cursor: url('.././assets/cursor.cur'), auto;
+        box-shadow: 0 0 10px 5px;
+    }
+    
 
-/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
- Basket  style 
- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+/* Basket  style */
 
 .warrior{
     position: absolute;
@@ -44,6 +135,7 @@ body{
     margin: 0 1rem;
 }
 .character{
+    position: relative;
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -85,6 +177,7 @@ body{
 
 
 
+
 .shopping{
     position: absolute;
     top: 15%;
@@ -101,13 +194,17 @@ body{
 }
 .shopping:hover{
    transform: scale(1.1);
-    
+
 }
 
 .shop{
     margin-right: 1rem;
-} 
+}
 
+#char-basket {
+    max-height: 100%;
+    overflow-y: scroll;
+}
 
 #topInfo {
     display: flex;
@@ -118,8 +215,6 @@ body{
     margin: 10px;
     color: whitesmoke;
     padding: 15px;
-    overflow-y: scroll;
-    overflow-y: visible;
 }
 
 
@@ -144,15 +239,19 @@ Header
     border-radius: 5px;
 }
 
-.coins-content>img {
+.coins-content > img {
     width: 35px;
 }
 
-.coins-content>p {
+.coins-content > p {
     width: 35px;
     font-size: 20px;
     margin-left: 5px;
     color: #fff;
+}
+
+.coins-counter {
+    transition: 0.3s;
 }
 
 .click-counter {
@@ -181,13 +280,7 @@ Header
     color: #fff;
 }
 
-
-/*
-///////////////////////////////////////////
-Basket
-///////////////////////////////////////////
-*/
-
+ 
 #basket {
     background-color: #CB831D;
     height: 700px;
@@ -203,50 +296,63 @@ Basket
 #basket.show{
     transform: translate(0);
 }
-
-#topInfo {
-    display: flex;
-    justify-content: space-between;
-    background: rgb(149, 105, 35);
-    background: linear-gradient(0deg, rgba(149, 105, 35, 1) 0%, rgba(48, 31, 5, 1) 100%);
-    border-radius: 10px;
-    margin: 10px;
-    color: whitesmoke;
-    padding: 15px;
-    overflow-y: scroll;
-    overflow-y: visible;
-}
-
-
-/*
+    
+    #topInfo {
+        display: flex;
+        justify-content: space-between;
+        background: rgb(149, 105, 35);
+        background: linear-gradient(0deg, rgba(149, 105, 35, 1) 0%, rgba(48, 31, 5, 1) 100%);
+        border-radius: 10px;
+        margin: 10px;
+        color: whitesmoke;
+        padding: 15px;
+        overflow-y: scroll;
+        overflow-y: visible;
+    }
+    /*
 ///////////////////////////////////////////
 Character Enemy
 ///////////////////////////////////////////
 */
-
-.character-enemy img {
-    position: absolute;
-    width: 450px;
-    bottom: 80px;
-    right: 18%;
-    cursor: pointer;
-    transform: scaleX(-1);
-}
-
-.character-damage {
-    position: absolute;
-    font-size: 50px;
-    color: rgb(189, 21, 21);
-    animation: animationDamage 0.3s ease;
-    opacity: 1;
-    outline: none;
-    pointer-events: none;
-}
-
-@keyframes animationDamage {
-    from {
-        transform: translate(50px, 100px);
-        opacity: 0;
+    
+    .character-enemy img {
+        position: absolute;
+        width: 450px;
+        bottom: 80px;
+        right: 18%;
+        cursor: url('.././assets/cursor.cur'), auto;
+        transform: scaleX(-1);
     }
-
-}
+    
+    .character-damage {
+        position: absolute;
+        font-size: 50px;
+        color: rgb(189, 21, 21);
+        animation: animationDamage 0.3s ease;
+        opacity: 1;
+        outline: none;
+        pointer-events: none;
+    }
+    
+    .hp {
+        position: absolute;
+        color: brown;
+        bottom: 450px;
+        right: 21.5%;
+        font-size: 30px;
+    }
+    
+    progress {
+        -webkit-appearance: none;
+    }
+    
+    ::-webkit-progress-value {
+        background-color: red;
+    }
+    
+    @keyframes animationDamage {
+        from {
+            transform: translate(50px, 100px);
+            opacity: 0;
+        }
+    }
