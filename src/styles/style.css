@@ -109,11 +109,32 @@
         cursor: url('.././assets/cursor.cur'), auto;
         box-shadow: 0 0 10px 5px;
     }
-    
+
+/* Basket  style */
+
+
+.shopping{
+    position: absolute;
+    top: 15%;
+    left: 0.6%;
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(31, 0, 0);
+    border-radius: 5px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.shopping:hover{
+   transform: scale(1.1);
 
 }
 
-/* Basket  style */
+.shop{
+    margin-right: 1rem;
+}
 
 .warrior{
     position: absolute;
@@ -200,39 +221,7 @@
     padding: 15px;
 }
 
-
 /*
-    .prices:hover {
-        transition: 0.2s;
-        cursor: pointer;
-    }
-    
-    .prices:hover {
-        transform: scale(1.1);
-    }
-    
-    #basket {
-        background-color: #CB831D;
-        float: left;
-        height: 500px;
-        width: 40vw;
-        border-radius: 10px;
-        margin: 10px;
-    }
-    
-    #topInfo {
-        display: flex;
-        justify-content: space-between;
-        background: rgb(149, 105, 35);
-        background: linear-gradient(0deg, rgba(149, 105, 35, 1) 0%, rgba(48, 31, 5, 1) 100%);
-        border-radius: 10px;
-        margin: 10px;
-        color: whitesmoke;
-        padding: 15px;
-        overflow-y: scroll;
-        overflow-y: visible;
-    }
-    /*
 ///////////////////////////////////////////
 Header
 ///////////////////////////////////////////
@@ -295,74 +284,28 @@ Header
 }
 
 
-/*
-    
-    .coins-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 350px;
-        padding: 5px;
-        margin: 10px;
-        background-color: rgb(31, 0, 0);
-        border: 3px solid rgb(87, 74, 47);
-        border-radius: 5px;
-    }
-    
-    .coins-content>img {
-        width: 35px;
-    }
-    
-    .coins-content>p {
-        width: 35px;
-        font-size: 20px;
-        margin-left: 5px;
-        color: #fff;
-    }
-    
-    .click-counter {
-        position: absolute;
-        top: 0;
-        left: 418px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 350px;
-        padding: 5px;
-        margin: 10px;
-        background-color: rgb(31, 0, 0);
-        border: 3px solid rgb(87, 74, 47);
-        border-radius: 5px;
-    }
-    
-    .click-counter>img {
-        width: 35px;
-    }
-    
-    .click-counter>p {
-        width: 35px;
-        font-size: 20px;
-        margin-left: 5px;
-        color: #fff;
-    }
+
     /*
 ///////////////////////////////////////////
 Basket
 ///////////////////////////////////////////
 */
     
-    #basket {
-        background-color: #CB831D;
-        max-height: 500px;
-        width: 40vw;
-        border-radius: 10px;
-        margin: 10px;
-        margin-top: 70px;
-    }
-    
+#basket {
+    background-color: #CB831D;
+    height: 700px;
+
+    max-height: 500px;
+    width: 40vw;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 70px;
+    transform: translate(-100%);
+    transition: .4s;
+}
+#basket.show{
+    transform: translate(0);
+}
     #topInfo {
         display: flex;
         justify-content: space-between;
