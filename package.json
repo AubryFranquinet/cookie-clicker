@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "build" : "rm -rf dist/. && cp /public/upgrade/ /dist/images/ -R && parcel build"
-
+    "build": "rm -rf dist/. && cp /public/upgrade/ /dist/images/ -R && parcel build"
   },
   "staticFiles": {
     "staticPath": "public",
@@ -16,5 +15,13 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AubryFranquinet/cookie-clicker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AubryFranquinet/cookie-clicker/issues"
+  },
+  "homepage": "https://github.com/AubryFranquinet/cookie-clicker#readme"
 }
