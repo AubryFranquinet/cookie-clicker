@@ -37,7 +37,7 @@ const handleUpgrade = (data, index) => {
         newDescription = `+ ${newInformation} coins / click`
         charBasket.childNodes[index].childNodes[1].childNodes[1].innerHTML = newDescription
     } else if (data.effect === "AUTOMATIQUE") {
-        newDescription = `+ ${newInformation} coins / click`
+        newDescription = `+ ${newInformation} coins / second`
         charBasket.childNodes[index].childNodes[1].childNodes[1].innerHTML = newDescription
     }
     
