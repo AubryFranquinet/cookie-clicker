@@ -26,26 +26,31 @@ export const changePowerClick = (value) => {
     powerClick = value
 }
 
+
 /////////////// WORK IN PROGRESS ////////////////
 //ENNEMY HEALTHBAR//
 const ennemies = [newImg1, newImg2, newImg3, newImg4];
+const skullDom = document.querySelector(".ennemiesCounter")
 let item = ennemies[Math.floor(Math.random() * ennemies.length)];
 
 const decrHealth = () => {
 
-    let isDead = false
+    let isDead = 0
     let healthBar = document.getElementById("hp")
     healthBar.value -= 10;
-
-    if (healthBar.value === 0) {
-        console.log("He's dead")
-        isDead = true
+    console.log(isDead)
+    if(healthBar.value == 0) {
+     
+        
+        healthBar.value = 100;
+        isDead++
+        skullDom.innerHTML = isDead;
+        
     }
+    
 
-    if (isDead === true) {
-        enemy.src = item
-    }
 }
+
 
 export const initEnemy = () => {
     enemy.addEventListener("click", () => {

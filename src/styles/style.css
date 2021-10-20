@@ -130,8 +130,8 @@
 .shopping:hover{
    transform: scale(1.1);
 
-}
 
+ }
 .shop{
     margin-right: 1rem;
 }
@@ -187,22 +187,39 @@
     background-color: greenyellow;
     padding:  20px 9px;
     border:  5px #8a5b0D solid;
-    cursor: pointer;
     box-shadow: 0 0 10px 5px;
     transition: 0.2s;
-    cursor: pointer;
+  
 }
 
 .prices:hover{
     transform: scale(1.1);
 }
 
-#basket {
-    background-color: #CB831D;
-    height: 500px;
-    width: 40vw;
-    border-radius: 10px;
-    margin: 10px;
+
+
+
+.shopping{
+    position: absolute;
+    top: 15%;
+    left: 0.6%;
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(31, 0, 0);
+    border-radius: 5px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.shopping:hover{
+   transform: scale(1.1);
+
+}
+
+.shop{
+    margin-right: 1rem;
 }
 
 #char-basket {
@@ -226,6 +243,88 @@
 Header
 ///////////////////////////////////////////
 */
+    
+    .coins-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        padding: 5px;
+        margin: 10px;
+        background-color: rgb(31, 0, 0);
+        border: 3px solid rgb(87, 74, 47);
+        border-radius: 5px;
+    }
+    
+    .coins-content>img {
+        width: 35px;
+    }
+    
+    .coins-content>p {
+        width: 35px;
+        font-size: 20px;
+        margin-left: 5px;
+        color: #fff;
+    }
+    
+    .coins-counter {
+        transition: 0.3s;
+    }
+    
+    .click-counter {
+        position: absolute;
+        top: 0;
+        left: 418px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        padding: 5px;
+        margin: 10px;
+        background-color: rgb(31, 0, 0);
+        border: 3px solid rgb(87, 74, 47);
+        border-radius: 5px;
+    }
+    
+    .click-counter>img {
+        width: 35px;
+    }
+    
+    .click-counter>p {
+        width: 35px;
+        font-size: 20px;
+        margin-left: 5px;
+        color: #fff;
+    }
+    
+    .ennemies-counter {
+        position: absolute;
+        top: 0;
+        left: 828px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        padding: 5px;
+        margin: 10px;
+        background-color: rgb(31, 0, 0);
+        border: 3px solid rgb(87, 74, 47);
+        border-radius: 5px;
+    }
+    
+    .ennemies-counter>img {
+        width: 35px;
+    }
+    
+    .ennemies-counter>p {
+        width: 35px;
+        font-size: 20px;
+        margin-left: 5px;
+        color: #fff;
+    }
 
 .coins-content {
     position: absolute;
@@ -283,8 +382,12 @@ Header
     color: #fff;
 }
 
+ 
+#basket {
+    background-color: #CB831D;
+    height: 700px;
 
-
+ }
     /*
 ///////////////////////////////////////////
 Basket
@@ -294,7 +397,6 @@ Basket
 #basket {
     background-color: #CB831D;
     height: 700px;
-
     max-height: 500px;
     width: 40vw;
     border-radius: 10px;
@@ -355,7 +457,7 @@ Character Enemy
         -webkit-appearance: none;
     }
     
-    ::-webkit-progress-value {
+     ::-webkit-progress-value {
         background-color: red;
     }
     
