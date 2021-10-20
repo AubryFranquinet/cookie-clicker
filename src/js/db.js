@@ -24,6 +24,9 @@ const attackAuto = (value, index) => setTimeout(() => {
 
 export const changeDb = (newDb) => {
     db_upgrade = newDb
+    let newDb_serialized = JSON.stringify(newDb)
+    localStorage.setItem('upgrades', newDb_serialized);
+    let newDb_deserialized = JSON.parse(localStorage.getItem('upgrades'))
 }
 
 export let db_upgrade = [

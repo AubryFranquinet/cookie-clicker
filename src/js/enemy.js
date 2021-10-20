@@ -5,14 +5,7 @@ import enemyHurtImg from "../../public/enemy/goblin_hurt.png"
 
 
 import newImg1 from "../../public/upgrade/01.png"
-import newImg2 from "../../publ3395224988.5
-cursor
-
-1015
-
-SHOP
-
-ic/upgrade/02.png"
+import newImg2 from "../../public/upgrade/02.png"
 import newImg3 from "../../public/upgrade/03.png"
 import newImg4 from "../../public/upgrade/04.png"
 
