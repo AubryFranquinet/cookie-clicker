@@ -4,8 +4,12 @@ import img3 from "../../public/upgrade/03.png"
 import img4 from "../../public/upgrade/04.png"
 import img5 from "../../public/upgrade/05.png"
 import img6 from "../../public/upgrade/06.png"
+
+
+
 import { handleClickEnemy } from "./enemy"
 import { coin, changeCoin } from "./coin"
+
 
 const actionEffect = (value, effect, level) => {
     if (value === undefined) return effect * level
