@@ -8,10 +8,12 @@ import newImg1 from "../../public/upgrade/01.png"
 import newImg2 from "../../public/upgrade/02.png"
 import newImg3 from "../../public/upgrade/03.png"
 import newImg4 from "../../public/upgrade/04.png"
+import death from "../assets/enemy/DEAD2.png"
 
 //USEFULL VARIABLES //
 const enemy = document.querySelector(".character-enemy-img")
 const characterEnemy = document.querySelector(".character-enemy")
+
 
 export let powerClick = 1
 
@@ -38,6 +40,7 @@ const decrHealth = () => {
         healthBar.value = 100;
         isDead++
         skullDom.innerHTML = isDead
+        enemy.src = death
         console.log(isDead)
     }
 
