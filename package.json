@@ -2,10 +2,10 @@
   "name": "2.clicker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "rm -rf dist/. && cp /public/upgrade/ /dist/images/ -R && parcel build"
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "gh-pages -d dist"
   },
   "staticFiles": {
     "staticPath": "public",
@@ -14,14 +14,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "parcel": "^2.0.0"
   },
+  "homepage": "https://aubryfranquinet.github.io/cookie-clicker/"
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AubryFranquinet/cookie-clicker.git"
   },
   "bugs": {
     "url": "https://github.com/AubryFranquinet/cookie-clicker/issues"
-  },
-  "homepage": "https://github.com/AubryFranquinet/cookie-clicker#readme"
+  }
 }
