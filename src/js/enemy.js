@@ -1,5 +1,5 @@
 import { addCoin } from "./coin"
-import { addClick } from "./clickCounter"
+import { addClick, death } from "./clickCounter"
 import enemyImg from "../../public/enemy/goblin.png"
 import enemyHurtImg from "../../public/enemy/goblin_hurt.png"
 
@@ -25,25 +25,24 @@ export const changePowerClick = (value) => {
 const ennemies = [newImg1, newImg2, newImg3, newImg4];
 const skullDom = document.querySelector(".ennemiesCounter")
 let item = ennemies[Math.floor(Math.random() * ennemies.length)];
+let isDead = 0
 
 const decrHealth = () => {
 
-    let isDead = 0
+    
     let healthBar = document.getElementById("hp")
     healthBar.value -= 10;
-    console.log(isDead)
-    if(healthBar.value == 0) {
-     
-        
+
+    if (healthBar.value === 0) {
+
         healthBar.value = 100;
         isDead++
-        skullDom.innerHTML = isDead;
-        
+        skullDom.innerHTML = isDead
+        console.log(isDead)
     }
-    
+
 
 }
-
 
 export const initEnemy = () => {
     enemy.addEventListener("click", () => {
@@ -52,6 +51,7 @@ export const initEnemy = () => {
         createDamageDom()
         addClick()
         decrHealth()
+
     })
 }
 
@@ -62,7 +62,7 @@ export const handleClickEnemy = (params) => {
 const changeImage = () => {
     enemy.src = enemyHurtImg
     setTimeout(() => {
-        
+
         enemy.src = enemyImg
 
     }, 100)
@@ -75,7 +75,7 @@ const createDamageDom = (params) => {
     const newP = document.createElement("p")
 
     newP.classList.add("character-damage")
-    
+
     if (params === undefined) newP.innerHTML = `+ ${powerClick} coin`
     else newP.innerHTML = `+ ${params} coin`
 
