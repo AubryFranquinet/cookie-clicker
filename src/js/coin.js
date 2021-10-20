@@ -1,4 +1,5 @@
-export let coin = 10000
+
+export let coin = 0
 const coinDom = document.querySelector(".coins-counter")
 
 export const addCoin = (powerClick) => {
@@ -21,15 +22,18 @@ document.addEventListener('DOMContentLoaded', function(e){
     }
     else{
         tasks = localStorage.getItem('tasks').split(',')
+
+        for(let item of tasks){
+            coinDom.innerHTML = item;
+            coin = parseFloat(item)
+          
+        }
     }
 
-    for(let item of tasks){
-        coinDom.innerHTML = item;
-    }
     
 })
 
- function addToLocalStorage(task){
+export function addToLocalStorage(task){
     let tasks 
     if(localStorage.getItem('tasks') === null){
         tasks = [];
@@ -39,5 +43,6 @@ document.addEventListener('DOMContentLoaded', function(e){
     }
     tasks.push(task)
     
-    localStorage.setItem('tasks', tasks)
+    localStorage.setItem('tasks', task)
+    
 }
