@@ -24,9 +24,13 @@ const attackAuto = (value, index) => setTimeout(() => {
 
 export const changeDb = (newDb) => {
     db_upgrade = newDb
+    let newDb_serialized = JSON.stringify(newDb)
+    localStorage.setItem('upgrades', newDb_serialized);
+    let newDb_deserialized = JSON.parse(localStorage.getItem('upgrades'))
 }
 
-export let db_upgrade = [
+
+let db_upgrade = [
     {
         name: "Knight of night",
         description: "+ 0.5 coin / click",
@@ -91,3 +95,11 @@ export let db_upgrade = [
         action: (value) => { return actionEffect(value, db_upgrade[5].damage, db_upgrade[5].level) }
     }
 ]
+
+let savedUpgrades = localStorage.getItem("upgrades")
+if(savedUpgrades !== null){
+    savedUpgrades = JSON.parse(savedUpgrades)
+    db_upgrade = savedUpgrades
+}
+
+export {db_upgrade}
